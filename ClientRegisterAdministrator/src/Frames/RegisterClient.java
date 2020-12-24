@@ -20,9 +20,9 @@ public class RegisterClient extends javax.swing.JFrame {
         this.jTextField_BirthDate.setText("");
         this.jTextField_DateAdmission.setText("");
     }
-    
-    private boolean validateField(String field){
-         return field.isEmpty();
+
+    private boolean validateField(String field) {
+        return field.isEmpty();
     }
 
     @SuppressWarnings("unchecked")

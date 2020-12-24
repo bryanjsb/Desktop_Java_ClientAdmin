@@ -25,3 +25,4 @@ hs_err_pid*
 
 #Exclude files
 !mysql-connector-java-8.0.20.jar
+/ClientRegisterAdministrator/dist/

@@ -1,6 +1,7 @@
 package Frames;
 
 import javax.swing.JOptionPane;
+import util.Util;
 
 public class LogIn extends javax.swing.JFrame {
 
@@ -34,6 +35,8 @@ public class LogIn extends javax.swing.JFrame {
 
 //        System.out.printf("Usuario:%s%n", user);
 //        System.out.printf("Contraseña:%s%n", pass);
+//           System.out.println(Util.validateUser(user));
+//            Util.validatePassword(pass);
         boolean init = checkUser(user, pass);
         if (init) {
             enterClientRegister();
