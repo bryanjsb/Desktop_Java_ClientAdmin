@@ -30,6 +30,11 @@ Se utilizara conector mysql para java v8.0.22.
 
 
 ## 3. Capturas.
+!["Ventana de bienvenida"]( ./screens/img1-welcome.png "Ventana de Bienvenida")
+
+!["Ventana de Login"]( ./screens/img2-login.png "Ventana de Login")
+
+!["Ventana de Registro de clientes"]( ./screens/img3-RegistroClientes.png "Ventana de registro de clientes")
 
 ## 4. Fuentes.
 
