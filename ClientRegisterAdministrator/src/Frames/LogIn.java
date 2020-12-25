@@ -33,14 +33,30 @@ public class LogIn extends javax.swing.JFrame {
         String pass;
         pass = this.jPasswordField_Password.getText();
 
-//        System.out.printf("Usuario:%s%n", user);
-//        System.out.printf("Contraseña:%s%n", pass);
-//           System.out.println(Util.validateUser(user));
-//            Util.validatePassword(pass);
-        boolean init = checkUser(user, pass);
-        if (init) {
+        try{
+            if(!Util.validateUser(user)){
+                throw new Exception("El usuario debe ser alfa-numerico"); 
+            }
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex.getMessage()
+                  ,"Usuario Incorrecto", JOptionPane.WARNING_MESSAGE);
+             this.jTextField_User.setText("");
+         
+        }
+
+        try{
+            Util.validatePassword(pass);
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex.getMessage()
+                  ,"Contraseña Incorrecta", JOptionPane.WARNING_MESSAGE);
+            this.jPasswordField_Password.setText("");
+         
+        }
+        
+        if (checkUser(user, pass)) {
             enterClientRegister();
-        } else {
+        } 
+        else {
             JOptionPane.showMessageDialog(null, "Usuario y/o contraseña"
                     + " no corresponde. Intentelo de nuevo",
                     "Login Incorrecto", JOptionPane.WARNING_MESSAGE);

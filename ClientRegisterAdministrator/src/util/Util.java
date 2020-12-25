@@ -14,7 +14,7 @@ public class Util {
         return matcher.matches();
     }
 
-    public static Boolean validatePassword(String pass) {
+    public static Boolean validatePassword(String pass) throws Exception {
         PasswordValidator.buildValidator(true, true, true, 4, 10);
         return PasswordValidator.validatePassword(pass);
     }

@@ -157,8 +157,8 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btn_Change" alignment="3" pref="42" max="32767" attributes="0"/>
-                  <Component id="btn_AddClient" alignment="3" pref="0" max="32767" attributes="0"/>
                   <Component id="btn_DeleteClient" alignment="3" pref="0" max="32767" attributes="0"/>
+                  <Component id="btn_AddClient" alignment="0" pref="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="136" max="-2" attributes="0"/>

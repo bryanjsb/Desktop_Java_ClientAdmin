@@ -9,18 +9,6 @@ class PasswordValidator {
     private static String pattern = null;
     private static int minLength = 0, maxLength = 0;
 
-    /**
-     * No one can make a direct instance
-     *
-     */
-    private PasswordValidator() {
-        //do nothing
-    }
-
-    /**
-     * Force the user to build a validator using this way only
-     *
-     */
     public static PasswordValidator buildValidator(boolean forceSpecialChar,
             boolean forceCapitalLetter,
             boolean forceNumber,
@@ -53,26 +41,28 @@ class PasswordValidator {
      * Here we will validate the password
      *
      */
-    public static boolean validatePassword(final String password) {
+    public static boolean validatePassword(final String password) throws Exception {
 
-        try {
             if (password.length() < minLength) {
-                throw new Exception();
+                throw new Exception(String.format("La longitud no puede ser menor "
+                        + "de: %d", minLength));
             }
-        } catch (Exception ex) {
-            System.out.printf("La contraseña es menor de %d", minLength);
-        }
-
-        try {
+        
             if (password.length() > maxLength) {
-                throw new Exception();
+                throw new Exception(String.format("La longitud no puede ser mayor "
+                        + "de: %d", maxLength));
             }
-        } catch (Exception ex) {
-            System.out.printf("La contraseña es mayor de %d", maxLength);
-        }
-
+       
         Pattern p = Pattern.compile(pattern);
         Matcher m = p.matcher(password);
         return m.matches();
+    }
+
+    public int getMinLength() {
+        return minLength;
+    }
+
+    public int getMaxLength() {
+        return maxLength;
     }
 }
